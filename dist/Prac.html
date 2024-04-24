@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+        .box-cover{
+            background-image: url(image/300Sfzuc.jpeg);
+            width: 150px;
+            height: 150px;
+            border: 2px solid #999;
+            margin: 10px;
+            background-size: cover;
+            background-position: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+
+        }
+        
+        .details{
+            line-height: 0px;
+            color: #FFF;
+            justify-content: center;
+            background-color: #3c3e4570;
+            height: 150px;
+            width: 150px;
+            position: relative;
+            top: -13%;
+            gap: 20px;
+            justify-items: center;
+            opacity: 0;
+            transition: .3s cubic-bezier(0.68, 0.09, 0, 0.96);
+            border-radius: 10px;
+        }
+        
+        .details:hover{
+            line-height: 10px;
+            opacity: 1;
+            gap: 20px;
+        }
+
+        .details >:nth-child(1),
+        .details >:nth-child(2){
+            opacity: 0;
+            transition: .3s ease-in-out;
+            position: relative;
+            top: 75%;
+        }
+
+        .details:hover >:nth-child(1),
+        .details:hover >:nth-child(2){
+            top: 40%;
+            opacity: 1;
+        }
+
+        .title{
+            font-size: 20px;
+        }
+        .price{
+            font-size: large;
+        }
+    </style>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    
+    
+    <input type="text" placeholder="Search" width="400px" height="70px" class="myinput">
+    <div class="display"></div>
+    
+
+    <div class="box-cover">
+        <!-- <img src="productimages/64e1d6ac46fdd.jpg" alt=""> -->
+        <div class="details">
+            <div class="title"><p>Photo</p></div>
+            <div class="price"><p>$20</p></div>
+        </div>
+    </div>
+
+    <!-- <script>
+        $(".myinput").on("input", function(){
+            // $(".display").html($(".myinput").val());
+            var input = $(".myinput").val();
+    
+            if(input != ""){
+                $.ajax({
+                    url:"searchproduct.php",
+                    method: "POST",
+                    data:{input:input},
+        
+                    success:function(data){
+                        $(".display").html(data);
+                    }
+                })
+            }else{
+                $(".display").html("Type to search...")
+            }
+        })
+    </script> -->
+    
+</body>
+</html>
+
+

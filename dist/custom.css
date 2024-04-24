@@ -1,0 +1,23 @@
+.nav-item{
+    transition: ease-in-out;
+}
+
+.nav-item:hover >:nth-child(1){
+    translate: -10px;
+}
+
+ul{
+    transition: 1s;
+}
+
+ul.hide{
+    transform: translateY(-400px);
+}
+
+ul.show{
+    transform: translateY(-20px);
+}
+
+.slide-transition {
+    transition: height 0.3s ease-in-out;
+}
